@@ -1,0 +1,23 @@
+# App data from https://my.telegram.org/apps (for authentication)
+# Variables like ${VAR} are loaded from .env
+app-id: ${APP_ID}
+app-hash: ${APP_HASH}
+# Unique Telegram session name
+instance-name: "forwarder"
+
+# Discord webhooks
+outputs:
+  test:
+    # Webhook url
+    webhook_url: ${DISCORD_WEBHOOK_TEST}
+    # Border color
+    embed_color: "03b2f8"
+
+# Telegram channels
+inputs:
+  testik:
+    # Channel identifier (number, link or @username)
+    id: 0
+    # Key name from outputs (where to forward to)
+    output-to:
+    - "test"

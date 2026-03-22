@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-forwarder"
+version = "0.1.0"
+description = "Message forwarder from Telegram to Discord"
+readme = "README.md"
+authors = [{ name = "SoSeDiK", email = "mrsosedik@gmail.com" }]
+requires-python = ">=3.14"
+dependencies = [
+    "python-dotenv",
+    "ruamel.yaml",
+    "telethon",
+    "cryptg",
+    "discord-webhook[async]",
+]
+
+[project.scripts]
+telegram-forwarder = "telegram_forwarder.main:main" 
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["telegram_forwarder"] 

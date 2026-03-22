@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.egg-info/
+venv/
+
+# IDE
+.vscode/
+
+# Project files
+.env
+config.yml
+*.session
+*.session-journal
